@@ -1,0 +1,178 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header />
+    <SOAP-ENV:Body>
+        <ns2:Response xmlns="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns2="urn:oasis:names:tc:SAML:1.0:protocol" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" InResponseTo="6ccf7c09-768f-4330-a502-234b6bfb5447" IssueInstant="2020-03-18T14:02:36.266Z" MajorVersion="1" MinorVersion="1" ResponseID="_CFB09C26C4B938ED5675B4F92DE427CBE80B399D">
+            <ns2:Status>
+                <ns2:StatusCode Value="ns2:Success" />
+            </ns2:Status>
+            <Assertion AssertionID="_ABC123" IssueInstant="2020-03-18T14:02:36.266Z" Issuer="Serveur SAML Cerbere - Secteur public Developpement durable" MajorVersion="1" MinorVersion="1">
+                <Conditions NotBefore="2020-03-18T13:02:36.266Z" NotOnOrAfter="2020-03-18T18:02:36.266Z" />
+                <AuthenticationStatement AuthenticationInstant="2020-03-18T14:02:36.266Z" AuthenticationMethod="urn:oasis:names:tc:SAML:1.0:am:password">
+                    <Subject>
+                        <NameIdentifier Format="urn:min.ddurable.cerbere:nameid-format:user-id">0</NameIdentifier>
+                        <SubjectConfirmation>
+                            <ConfirmationMethod>urn:oasis:names:tc:SAML:1.0:cm:artifact</ConfirmationMethod>
+                            <SubjectConfirmationData xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">ST-0000000000000000000000000000000000000000</SubjectConfirmationData>
+                        </SubjectConfirmation>
+                    </Subject>
+                </AuthenticationStatement>
+                <AttributeStatement>
+                    <Subject>
+                        <NameIdentifier Format="urn:min.ddurable.cerbere:nameid-format:user-id">0</NameIdentifier>
+                        <SubjectConfirmation>
+                            <ConfirmationMethod>urn:oasis:names:tc:SAML:1.0:cm:artifact</ConfirmationMethod>
+                            <SubjectConfirmationData xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">ST-0000000000000000000000000000000000000000</SubjectConfirmationData>
+                        </SubjectConfirmation>
+                    </Subject>
+                    <Attribute AttributeName="APPLICATION.API" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">0</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="APPLICATION.DUREE_INACTIVITE" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">0</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.FAX" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">+33 000000</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.DESCRIPTION" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">responsable</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.PRENOM" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">Jean</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.MATRICULE" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">EQU000000000</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="ENTITE.LDAP_O" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">equipement</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.TEL_FIXE" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">+33 000000</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="ENTITE.UNITE" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">SG/SNUM/A/B/C</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="ENTITE.LDAP_OU" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">SG</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="APPLICATION.EST_SSO" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">true</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="ENTREPRISE.ADR_PAYS_NOM" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string" />
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.LDAP_OU" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">SG</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.TEL_MOBILE" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string" />
+                    </Attribute>
+                    <Attribute AttributeName="ENTITE.LDAP_DN" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">fr/equipement/AC/SG/SNUM/A/B/C</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="APPLICATION.NOM" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">AUTHENTIFICATION TOUS COMPTES</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="APPLICATION.ID" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">3</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.NOM" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">MARTIN</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="ENTITE.SIREN" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string" />
+                    </Attribute>
+                    <Attribute AttributeName="ENTREPRISE.ADR_PAYS_CODE" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string" />
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.EST_VERIFIE" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">1</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.BUREAU" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string" />
+                    </Attribute>
+                    <Attribute AttributeName="ENTREPRISE.ADR_CODEPOSTAL" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string" />
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.ID" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">0</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.ADR_VILLE" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">NANTES</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="ENTREPRISE.SIREN" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string" />
+                    </Attribute>
+                    <Attribute AttributeName="ENTREPRISE.ADR_VILLE" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string" />
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.MEL" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">Jean.Martin@ici.fr</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.UNITE" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">SG/SNUM/A/B/C</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.ADR_PAYS_CODE" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">FR</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.ADR_PAYS_NOM" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">FRANCE</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.CIVILITE" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">M</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="ENTITE.NOM" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.ADR_RUE" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">1, rue des Fleurs</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.LOGIN" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">jean.martin</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="ENTREPRISE.ADR_RUE" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string" />
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.LDAP_DN" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">fr/equipement/AC/SG/SNUM/A/B/C</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="AUTORISATION.PROFILS" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">AUTHENTIFICATION;fr/equipement;none</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.ADR_CODEPOSTAL" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">44000</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="ROLES" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">AUTHENTIFICATION</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.MELPR" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">Jean.Martin@ici.fr</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="APPLICATION.NIVEAU_AUTHENTIFICATION" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">0</AttributeValue>
+                    </Attribute>
+                    <Attribute AttributeName="ENTREPRISE.RAISON_SOCIALE" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string" />
+                    </Attribute>
+                    <Attribute AttributeName="UTILISATEUR.LDAP_O" AttributeNamespace="urn:min.ddurable.cerbere">
+                        <AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">equipement</AttributeValue>
+                    </Attribute>
+                </AttributeStatement>
+            </Assertion>
+            <Assertion AssertionID="_DEF456" IssueInstant="2020-03-18T14:02:36.266Z" Issuer="Serveur SAML Cerbere - Secteur public Developpement durable" MajorVersion="1" MinorVersion="1">
+                <Conditions NotBefore="2020-03-18T10:02:36.266Z" NotOnOrAfter="2020-03-18T18:02:36.266Z" />
+                <AuthorizationDecisionStatement Decision="Permit" Resource="3">
+                    <Subject>
+                        <NameIdentifier Format="urn:min.ddurable.cerbere:nameid-format:user-id">0</NameIdentifier>
+                    </Subject>
+                    <Action Namespace="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">PROFIL=AUTHENTIFICATION;fr/equipement;none</Action>
+                    <Action Namespace="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">APPLICATION.API=0</Action>
+                    <Action Namespace="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">APPLICATION.NOM=AUTHENTIFICATION TOUS COMPTES</Action>
+                    <Action Namespace="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">APPLICATION.DUREE_INACTIVITE=0</Action>
+                    <Action Namespace="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">APPLICATION.ID=3</Action>
+                    <Action Namespace="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">APPLICATION.NIVEAU_AUTHENTIFICATION=0</Action>
+                    <Action Namespace="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">APPLICATION.EST_SSO=true</Action>
+                </AuthorizationDecisionStatement>
+            </Assertion>
+        </ns2:Response>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
