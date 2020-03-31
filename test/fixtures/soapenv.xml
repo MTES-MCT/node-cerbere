@@ -9,7 +9,7 @@
                 <Conditions NotBefore="2020-03-18T13:02:36.266Z" NotOnOrAfter="2020-03-18T18:02:36.266Z" />
                 <AuthenticationStatement AuthenticationInstant="2020-03-18T14:02:36.266Z" AuthenticationMethod="urn:oasis:names:tc:SAML:1.0:am:password">
                     <Subject>
-                        <NameIdentifier Format="urn:min.ddurable.cerbere:nameid-format:user-id">0</NameIdentifier>
+                        <NameIdentifier Format="urn:min.ddurable.cerbere:nameid-format:user-id">00000</NameIdentifier>
                         <SubjectConfirmation>
                             <ConfirmationMethod>urn:oasis:names:tc:SAML:1.0:cm:artifact</ConfirmationMethod>
                             <SubjectConfirmationData xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">ST-0000000000000000000000000000000000000000</SubjectConfirmationData>
@@ -18,7 +18,7 @@
                 </AuthenticationStatement>
                 <AttributeStatement>
                     <Subject>
-                        <NameIdentifier Format="urn:min.ddurable.cerbere:nameid-format:user-id">0</NameIdentifier>
+                        <NameIdentifier Format="urn:min.ddurable.cerbere:nameid-format:user-id">00000</NameIdentifier>
                         <SubjectConfirmation>
                             <ConfirmationMethod>urn:oasis:names:tc:SAML:1.0:cm:artifact</ConfirmationMethod>
                             <SubjectConfirmationData xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">ST-0000000000000000000000000000000000000000</SubjectConfirmationData>
@@ -162,7 +162,7 @@
                 <Conditions NotBefore="2020-03-18T10:02:36.266Z" NotOnOrAfter="2020-03-18T18:02:36.266Z" />
                 <AuthorizationDecisionStatement Decision="Permit" Resource="3">
                     <Subject>
-                        <NameIdentifier Format="urn:min.ddurable.cerbere:nameid-format:user-id">0</NameIdentifier>
+                        <NameIdentifier Format="urn:min.ddurable.cerbere:nameid-format:user-id">00000</NameIdentifier>
                     </Subject>
                     <Action Namespace="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">PROFIL=AUTHENTIFICATION;fr/equipement;none</Action>
                     <Action Namespace="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">APPLICATION.API=0</Action>

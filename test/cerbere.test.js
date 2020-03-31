@@ -1,59 +1,46 @@
-// var nock = require('nock'),
-//     Cerbere = require('cerbere'),
- var   should = require('should');
-// var base_url = 'https://cebere/cas/public',
-//     service = 'test_service',
-//     cerbere = new Cerbere({ url: base_url }),
-//     user = "jean.martin";
+const Cerbere = require('../lib/cerbere');
+const base_url = 'https://cerbere',
+    service = 'test_service',
+    cerbere = new Cerbere({ url: `${base_url}/cas/public`, service: service });
+const nock = require('nock');
 
-describe('validate', () => {
-    it('should create a new post SOAP enveloppe', () => {
-        // var ticket = "ST-0";
-        // nock(base_url)
-        //     .post('/samlValidate')
-        //     .query({ ticket: ticket, service: service })
-        //     .replyWithFile(200, 'fixtures/soapenv.xml');
-        // var callback = function (err, status, username, extended) {
-        //     should.exist(username, 'should have username');
-        //     should.equal(username, user, 'should return valid username');
-        //     should.exist(extended.attributes, 'should have attributes property');
-        //     should.deepEqual(extended.attributes, attributes, 'should have attributes');
-        //     should.exist(extended.ticket, 'should have ticket property');
-        //     should.equal(extended.ticket, ticket, 'should return valid ticket property');
-        // };
-        // cerbere.validate(ticket, service, callback);
-        should.exist(true, 'dummy');
-    });
+test('login', () => {
+    expect(cerbere.login(service)).toBe("https://cerbere/cas/public/login?service=test_service");
 });
 
-describe('authenticate', () => {
-    it('should redirect to Cerbere login if no ticket ', () => {
-        // var req = {
-        //     method: 'GET',
-        //     url: base_url
-        // };
-        // var res = {};
-        // var callback = function () {
-        //     should.not.exist(true, 'should not call this function');
-        // };
-        // cerbere.authenticate(req, res, callback, service);
-        should.exist(true, 'dummy');
-    });
+test('logout', () => {
+    expect(cerbere.logout(service, false)).toBe("https://cerbere/cas/public/logout?url=test_service");
+    expect(cerbere.logout(service, true)).toBe("https://cerbere/cas/public/logout?service=test_service");
+});
 
-    it('should validate Cerbere if ticket ', () => {
-        // nock(base_url)
-        //     .post('/samlValidate')
-        //     .query({ ticket: ticket, service: service })
-        //     .replyWithFile(200, 'fixtures/soapenv.xml');
-        // var callback = function (err, status, username, extended) {
-        //     should.exist(username, 'should have username');
-        //     should.equal(username, user, 'should return valid username');
-        //     should.exist(extended.attributes, 'should have attributes property');
-        //     should.deepEqual(extended.attributes, attributes, 'should have attributes');
-        //     should.exist(extended.ticket, 'should have ticket property');
-        //     should.equal(extended.ticket, ticket, 'should return valid ticket property');
-        // };
-        // cerbere.authenticate(req, res, callback, service);
-        should.exist(true, 'dummy');
-    });
+test('validate', async () => {
+    const ticket = "ST-0";
+    nock(base_url)
+        .post('/cas/public/samlValidate')
+        .replyWithFile(200, __dirname + '/fixtures/soapenv.xml');
+    console.log(nock.activeMocks());
+    const resultat = await cerbere.validate(ticket);
+    expect(resultat.attributes["UTILISATEUR.MEL"]).toBe('Jean.Martin@ici.fr');
+    expect(resultat.attributes["UTILISATEUR.PRENOM"]).toBe('Jean');
+    expect(resultat.attributes["UTILISATEUR.NOM"]).toBe('MARTIN');
+    expect(resultat.attributes["UTILISATEUR.CIVILITE"]).toBe('M');
+    expect(resultat.attributes["UTILISATEUR.DESCRIPTION"]).toBe('responsable');
+    expect(resultat.attributes["UTILISATEUR.TEL_FIXE"]).toBe('+33 000000');
+    expect(resultat.attributes["ENTITE.UNITE"]).toBe('SG/SNUM/A/B/C');
+    expect(resultat.attributes["ENTITE.SIREN"]).toBe(undefined);
+    expect(resultat.attributes["UTILISATEUR.ADR_CODEPOSTAL"]).toBe(44000);
+    expect(resultat.attributes["ROLES"]).toBe('AUTHENTIFICATION');
+});
+
+test('validate receives invalid xml and throws error', async () => {
+    const ticket = "ST-0";
+    nock(base_url)
+        .post('/cas/public/samlValidate')
+        .reply(200, { "UTILISATEUR.MEL": 'Jean.Martin@ici.fr' });
+    try {
+        console.log(nock.activeMocks());
+        await cerbere.validate(ticket);
+    } catch (err) {
+        expect(err.message).toMatch(/XML parse error/);
+    }
 });

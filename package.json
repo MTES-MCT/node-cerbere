@@ -1,6 +1,6 @@
 {
   "name": "cerbere",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Client Node.js de Cerbere",
   "main": "./lib",
   "directories": {
@@ -25,17 +25,10 @@
   "homepage": "https://github.com/MTES-MCT/node-cerbere#readme",
   "dependencies": {
     "fast-xml-parser": "^3.16.0",
-    "node-uuid": "^1.4.8"
+    "uuid": "^7.0.2"
   },
   "devDependencies": {
     "jest": "^25.1.0",
-    "nock": "^12.0.3",
-    "should": "^13.2.3"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "coveragePathIgnorePatterns": [
-      "/node_modules/"
-    ]
+    "nock": "^12.0.3"
   }
 }
