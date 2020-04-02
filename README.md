@@ -69,38 +69,6 @@ const logoutUrl  = cerbereClient.logout(config.serviceUrl, true);
 
 Utiliser la stratégie [passport-cerbere](https://github.com/MTES-MCT/passport-cerbere).
 
-### Avec [express.js](http://expressjs.com/)
-
-Il faut définir des routes d'authentification login:
-
-```js
-app.get("/login", function(req, res, next) {
-    const ticket = req.query.ticket
-    // login si pas de ticket
-    // cerbere.login()
-    // sinon validate
-    cerbere.validate(req, res, function(err, status, username, extended) {
-        if (err) {
-          // Handle the error
-          res.send({error: err});
-        } else {
-          // Log the user in
-          res.send({status: status, username: username, attributes: extended.attributes});
-        }
-      });
-});
-```
-
-et logout:
-
-```js
-app.get("/logout", function(req, res) {
-  var returnURL = "http://127.0.0.1:3000/";
-  req.logout();
-  cerbere.logout(req, res, returnUrl, true);
-});
-```
-
 ## Tests
 
 Exemple d'enveloppe SOAP (SAML 1.1) retournée par Cerbère après un `/samlValidate` dans [test/fixtures](test/fixtures). Les attributs de l'utilisateurs connecté commencent par `UTILISATEUR.` et ceux de son entreprise associée par `ENTREPRISE.`.
