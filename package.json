@@ -1,6 +1,6 @@
 {
   "name": "cerbere",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "Client Node.js de Cerbere",
   "main": "./lib",
   "directories": {
