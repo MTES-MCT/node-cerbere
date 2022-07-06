@@ -25,7 +25,7 @@
   "homepage": "https://github.com/MTES-MCT/node-cerbere#readme",
   "dependencies": {
     "fast-xml-parser": "^3.17.0",
-    "uuid": "^8.0.0"
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "jest": "^26.0.1",
